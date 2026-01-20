@@ -818,3 +818,29 @@ Style/TrailingCommaInArrayLiteral:
 # URISchemes: http, https
 Layout/LineLength:
   Max: 264
+
+# Offense count: 1
+# Configuration parameters: CountComments, CountAsOne.
+Metrics/ClassLength:
+  Exclude:
+    - 'lib/annotate/annotate_models.rb'
+
+# Offense count: 2
+Naming/PredicateMethod:
+  Exclude:
+    - 'lib/annotate/annotate_models.rb'
+
+# Offense count: 4
+RSpec/IndexedLet:
+  Exclude:
+    - 'spec/lib/annotate/helpers_spec.rb'
+
+# Offense count: 1
+RSpec/LeakyLocalVariable:
+  Exclude:
+    - 'spec/lib/annotate/annotate_models_spec.rb'
+
+# Offense count: 2
+RSpec/RemoveConst:
+  Exclude:
+    - 'spec/lib/annotate/annotate_models_spec.rb'
