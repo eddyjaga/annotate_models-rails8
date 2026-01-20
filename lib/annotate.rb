@@ -35,7 +35,7 @@ module Annotate
       end
 
       default_value = ENV[key.to_s] unless ENV[key.to_s].blank?
-      ENV[key.to_s] = default_value.nil? ? nil : default_value.to_s
+      ENV[key.to_s] = default_value&.to_s
     end
   end
 
@@ -44,13 +44,13 @@ module Annotate
   #
   def self.setup_options(options = {})
     Constants::POSITION_OPTIONS.each do |key|
-      options[key] = Annotate::Helpers.fallback(ENV[key.to_s], ENV['position'], 'before')
+      options[key] = Annotate::Helpers.fallback(ENV.fetch(key.to_s, nil), ENV.fetch('position', nil), 'before')
     end
     Constants::FLAG_OPTIONS.each do |key|
-      options[key] = Annotate::Helpers.true?(ENV[key.to_s])
+      options[key] = Annotate::Helpers.true?(ENV.fetch(key.to_s, nil))
     end
     Constants::OTHER_OPTIONS.each do |key|
-      options[key] = !ENV[key.to_s].blank? ? ENV[key.to_s] : nil
+      options[key] = !ENV[key.to_s].blank? ? ENV.fetch(key.to_s, nil) : nil
     end
     Constants::PATH_OPTIONS.each do |key|
       options[key] = !ENV[key.to_s].blank? ? ENV[key.to_s].split(',') : []
@@ -138,7 +138,7 @@ module Annotate
     private
 
     def load_requires(options)
-      options[:require].count > 0 &&
+      options[:require].any? &&
         options[:require].each { |path| require path }
     end
   end

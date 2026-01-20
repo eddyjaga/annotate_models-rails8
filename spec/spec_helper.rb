@@ -1,20 +1,16 @@
 if ENV['COVERAGE']
-  require 'coveralls'
-  require 'codeclimate-test-reporter'
   require 'simplecov'
-
-  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
-    [
-      Coveralls::SimpleCov::Formatter,
-      SimpleCov::Formatter::HTMLFormatter,
-      CodeClimate::TestReporter::Formatter
-    ]
-  )
-
   SimpleCov.start
 end
 
 require 'rubygems'
+
+# Ruby 3.2+ removed File.exists? but the 'files' gem still uses it
+class File
+  class << self
+    alias exists? exist? unless method_defined?(:exists?)
+  end
+end
 require 'bundler'
 Bundler.setup
 
