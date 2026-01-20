@@ -1,10 +1,21 @@
-## Annotate (aka AnnotateModels)
+## db-annotate
 
-[![Gem Version](https://badge.fury.io/rb/annotate.svg)](http://badge.fury.io/rb/annotate)
-[![Downloads count](https://img.shields.io/gem/dt/annotate.svg?style=flat)](https://rubygems.org/gems/annotate)
-[![CI Status](https://github.com/ctran/annotate_models/workflows/CI/badge.svg)](https://github.com/ctran/annotate_models/actions?workflow=CI)
-[![Coveralls](https://coveralls.io/repos/ctran/annotate_models/badge.svg?branch=develop)](https://coveralls.io/r/ctran/annotate_models?branch=develop)
-[![Maintenability](https://codeclimate.com/github/ctran/annotate_models/badges/gpa.svg)](https://codeclimate.com/github/ctran/annotate_models)
+[![Gem Version](https://badge.fury.io/rb/db-annotate.svg)](http://badge.fury.io/rb/db-annotate)
+
+**Rails 8 & Ruby 3.4+ compatible fork of annotate_models**
+
+---
+
+### Why This Fork?
+
+This gem is a fork of [annotate_models](https://github.com/ctran/annotate_models). The original gem hasn't been actively maintained since 2022, with no responses to issues or pull requests. This fork provides:
+
+- ✅ **Rails 8 support** (ActiveRecord 7.1 - 8.x)
+- ✅ **Ruby 3.4+ compatibility**
+- ✅ Modern gem dependencies
+- ✅ Continued maintenance
+
+---
 
 Add a comment summarizing the current schema to the top or bottom of each of your...
 
@@ -76,34 +87,32 @@ b) In `lib/tasks/auto_annotate_models.rake` add the `models` key-value option:
       ...
 ```
 
+## Requirements
+
+- **Ruby**: >= 3.2.0
+- **Rails**: >= 7.1, < 9.0
+
 ## Install
 
-Into Gemfile from rubygems.org:
+Into Gemfile from RubyGems.org:
 
 ```ruby
 group :development do
-  gem 'annotate'
+  gem 'db-annotate'
 end
 ```
 
-Into Gemfile from Github:
+Into Gemfile from GitHub:
 
 ```ruby
 group :development do
-  gem 'annotate', git: 'https://github.com/ctran/annotate_models.git'
+  gem 'db-annotate', git: 'https://github.com/eddyjaga/annotate_models-rails8.git'
 end
 ```
 
-Into environment gems from rubygems.org:
+Into environment gems from RubyGems.org:
 
-    gem install annotate
-
-Into environment gems from Github checkout:
-
-    git clone https://github.com/ctran/annotate_models.git annotate_models
-    cd annotate_models
-    rake gem
-    gem install dist/annotate-*.gem
+    gem install db-annotate
 
 ## Usage
 
@@ -329,3 +338,7 @@ Released under the same license as Ruby. No Support. No Warranty.
 ## Authors
 
 [See AUTHORS.md](AUTHORS.md).
+
+## Credits
+
+This gem is a fork of [annotate_models](https://github.com/ctran/annotate_models) by the original authors. Updated for Rails 8 and Ruby 3.4+ compatibility by [@eddyjaga](https://github.com/eddyjaga).
