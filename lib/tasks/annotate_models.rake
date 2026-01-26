@@ -1,4 +1,4 @@
-annotate_lib = File.expand_path(File.dirname(File.dirname(__FILE__)))
+annotate_lib = File.expand_path(File.dirname(__FILE__, 2))
 
 unless ENV['is_cli']
   task :set_annotation_options

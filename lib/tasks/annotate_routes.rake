@@ -1,4 +1,4 @@
-annotate_lib = File.expand_path(File.dirname(File.dirname(__FILE__)))
+annotate_lib = File.expand_path(File.dirname(__FILE__, 2))
 
 unless ENV['is_cli']
   task :set_annotation_options
@@ -22,7 +22,7 @@ end
 
 desc "Removes the route map from routes.rb"
 task :remove_routes => :environment do
-  annotate_lib = File.expand_path(File.dirname(File.dirname(__FILE__)))
+  annotate_lib = File.expand_path(File.dirname(__FILE__, 2))
   require "#{annotate_lib}/annotate/annotate_routes"
 
   options={}
