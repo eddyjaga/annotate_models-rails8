@@ -4,6 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/eddyjaga/annotate_models-rails8.svg)](https://github.com/eddyjaga/annotate_models-rails8/releases)
 [![Gem](https://img.shields.io/gem/dt/db-annotate.svg)](https://rubygems.org/gems/db-annotate)
 [![CI](https://github.com/eddyjaga/annotate_models-rails8/actions/workflows/ci.yml/badge.svg)](https://github.com/eddyjaga/annotate_models-rails8/actions/workflows/ci.yml)
+![Coverage](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Feddyjaga%2Fannotate_models-rails8%2Fdevelop%2Fbadges%2Fcoverage.json)
 ![GitHub top language](https://img.shields.io/github/languages/top/eddyjaga/annotate_models-rails8)
 [![Documentation](https://img.shields.io/badge/docs-rubydoc.info-blue.svg)](https://rubydoc.info/gems/db-annotate)
 
