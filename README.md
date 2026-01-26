@@ -1,6 +1,11 @@
 ## db-annotate
 
-[![Gem Version](https://badge.fury.io/rb/db-annotate.svg)](http://badge.fury.io/rb/db-annotate)
+[![Gem Version](https://img.shields.io/gem/v/db-annotate.svg)](https://rubygems.org/gems/db-annotate)
+[![GitHub release](https://img.shields.io/github/release/eddyjaga/annotate_models-rails8.svg)](https://github.com/eddyjaga/annotate_models-rails8/releases)
+[![Gem](https://img.shields.io/gem/dt/db-annotate.svg)](https://rubygems.org/gems/db-annotate)
+[![CI](https://github.com/eddyjaga/annotate_models-rails8/actions/workflows/ci.yml/badge.svg)](https://github.com/eddyjaga/annotate_models-rails8/actions/workflows/ci.yml)
+![GitHub top language](https://img.shields.io/github/languages/top/eddyjaga/annotate_models-rails8)
+[![Documentation](https://img.shields.io/badge/docs-rubydoc.info-blue.svg)](https://rubydoc.info/gems/db-annotate)
 
 **Rails 8 & Ruby 3.4+ compatible fork of annotate_models**
 
